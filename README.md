@@ -7,7 +7,7 @@
 1. 在`桌面设置-系统导航方式`里，选择`全面屏手势`，关闭`隐藏手势提示线`
 
 
-2. 安装最新版[Google](https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox)应用，开启`自启动`权限
+2. 安装最新版[Google](https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox)应用，开启`自启动`权限，`省电策略`选择`无限制`
 
 
 3. 安装并启用模块，重启手机
