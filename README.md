@@ -1,6 +1,6 @@
 # MiCTS
 
-简体中文&nbsp;&nbsp;|&nbsp;&nbsp;[English](/README_en.md)
+简体中文&nbsp;&nbsp;|&nbsp;&nbsp;[English](https://github.com/parallelcc/MiCTS/blob/main/README_en.md)
 
 小米系统桌面开启圈定即搜（Circle to Search）功能
 
