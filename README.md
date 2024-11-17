@@ -12,7 +12,7 @@
 
 
 2. 安装并打开MiCTS
-    - 如果幸运的话，可以在不用root的情况下直接触发圈定即搜
+    - 如果幸运的话，可以在不用LSPosed的情况下直接触发圈定即搜
     - 否则需要在LSPosed里激活模块，在MiCTS设置里开启`Google机型伪装`后，强制重启Google
     - 如果还是没有反应，尝试清除Google的数据，然后打开Google，再强制重启Google
 
