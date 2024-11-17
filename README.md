@@ -2,21 +2,52 @@
 
 简体中文&nbsp;&nbsp;|&nbsp;&nbsp;[English](https://github.com/parallelcc/MiCTS/blob/main/README_en.md)
 
-小米系统桌面开启圈定即搜（Circle to Search）功能
+在任意Android 9–15设备上触发圈定即搜（Circle to Search）功能
 
-## 操作步骤
+*本应用只负责触发圈定即搜，无法处理触发成功后可能出现的问题*
 
-1. 安装最新版[Google](https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox)应用，开启`自启动`权限，`省电策略`选择`无限制`
+## 使用方法
 
-
-2. 安装并启用模块，重启手机
-
-
-3. 执行相应的动作触发
-    - 如果是全面屏手势，需要在`桌面设置-系统导航方式`里，关闭`隐藏手势提示线`，之后长按底部小白条触发
-    - 如果是经典导航键（三按钮），需要在`桌面设置-系统导航方式-按键快捷方式-长按Home键`里，选择`语音助手`，之后长按Home键触发
+1. 安装最新版[Google](https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox)应用，开启自启动，关闭后台限制，将默认助理应用设置为Google
 
 
-4. 如果没有反应，尝试执行以下选项后重试:
-    - 在`设置-应用设置-右上角其他设置-默认应用设置-助手和语音输入-数字助理应用`里选择Google
-    - 在Google的应用信息里`清除全部数据`，再打开Google，再到应用信息里`结束运行`并开启`自启动`
+2. 安装并打开MiCTS
+    - 如果幸运的话，可以在不用root的情况下直接触发圈定即搜
+    - 否则需要在LSPosed里激活模块，在MiCTS设置里开启`Google机型伪装`后，强制重启Google
+    - 如果还是没有反应，尝试清除Google的数据，然后打开Google，再强制重启Google
+
+
+3. 设置触发方式
+    - 打开MiCTS即可触发，因此可以利用其他软件，比如悬浮球、Xposed Edge、ShortX等，将动作设置为打开MiCTS，实现自定义触发方式
+    - MiCTS提供了一个触发磁贴，可将其添加到快速设置面板里，通过点击磁贴触发
+    - 对于小米设备，MiCTS内置了长按小白条触发和长按Home键触发的功能，可以在MiCTS设置里开启（安装MiCTS后需要激活模块并重启手机才能使用）
+
+## 设置
+
+### 进入设置的方式
+- 长按MiCTS应用图标，出现设置选项，点击进入
+- 从LSPosed模块页面，点击MiCTS，再点击设置图标进入
+- 长按快速设置面板的磁贴进入
+
+### 应用设置
+- 默认触发延迟：通过打开MiCTS触发的延迟
+- 磁贴触发延迟：通过点击快速设置面板的磁贴触发的延迟
+
+### 模块设置
+需要在LSPosed里激活模块
+- 系统触发服务：触发所使用的系统服务，只会显示当前支持的选项，依赖作用域选择系统框架
+   - VIS：支持Android 9–15，需要将默认助理应用设置为Google，触发时屏幕边缘会闪，没有激活模块的情况下只能使用此服务
+   - CSHelper：支持Android 14 QPR3及以上，不需要设置默认助理应用，触发时屏幕边缘不会闪
+
+
+- 长按小白条触发：仅支持小米设备，依赖作用域选择系统桌面
+
+
+- 长按Home键触发：仅支持小米设备，依赖作用域选择系统框架
+
+ 
+- Google机型伪装：依赖作用域选择Google
+   - 制造商：修改Google读取到的ro.product.manufacturer
+   - 品牌：修改Google读取到的ro.product.brand
+   - 型号：修改Google读取到的ro.product.model
+   - 设备：修改Google读取到的ro.product.device 
