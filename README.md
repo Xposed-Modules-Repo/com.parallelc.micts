@@ -12,8 +12,8 @@
 
 
 2. 安装并打开MiCTS
-    - 如果幸运的话，可以在不用LSPosed的情况下直接触发圈定即搜
-    - 否则需要在LSPosed里激活模块，在MiCTS设置里开启`Google机型伪装`后，强制重启Google
+    - 如果幸运的话，在不用LSPosed的情况下，打开MiCTS就会直接触发圈定即搜
+    - 如果没有反应，则需要在LSPosed里激活模块，在[MiCTS设置](#进入设置的方式)里开启`Google机型伪装`后，强制重启Google
     - 如果还是没有反应，尝试清除Google的数据，然后打开Google，再强制重启Google
 
 
@@ -35,6 +35,7 @@
 
 ### 模块设置
 需要在LSPosed里激活模块
+
 - 系统触发服务：触发所使用的系统服务，只会显示当前支持的选项，依赖作用域选择系统框架
    - VIS：支持Android 9–15，需要将默认助理应用设置为Google，触发时屏幕边缘会闪，没有激活模块的情况下只能使用此服务
    - CSHelper：支持Android 14 QPR3及以上，不需要设置默认助理应用，触发时屏幕边缘不会闪
@@ -50,4 +51,4 @@
    - 制造商：修改Google读取到的ro.product.manufacturer
    - 品牌：修改Google读取到的ro.product.brand
    - 型号：修改Google读取到的ro.product.model
-   - 设备：修改Google读取到的ro.product.device 
+   - 设备：修改Google读取到的ro.product.device
